@@ -23,14 +23,6 @@ namespace SignalRChat.Domain
 
         public TableStorageWriter(IOptions<StorageSettings> storageSettings)
         {
-            //HACK: Remove?
-            //var cs = CloudConfigurationManager.GetSetting("StorageConnectionString");
-
-            //CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
-            //    CloudConfigurationManager.GetSetting("StorageConnectionString"));
-            //storageAccount = CloudStorageAccount.Parse(cs);
-
-
             this.storageSettings = storageSettings;
             storageAccount = CloudStorageAccount.Parse(this.storageSettings.Options.ConnectionString);
 

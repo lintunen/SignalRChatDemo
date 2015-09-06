@@ -10,11 +10,11 @@ $publishProperties = @{'WebPublishMethod'='MSDeploy';
                         'MSDeployServiceUrl'=$msdeployurl;
                         'DeployIisAppPath'=$website.Name;
                         'Username'=$website.PublishingUsername;
-                        'Password'=$website.PublishingPassword}
+                        'Password'=$website.PublishingPassword;
+						'DeleteExistingFiles'=$true
+}
 
 
 $publishScript = "${env:ProgramFiles(x86)}\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Web Tools\Publish\Scripts\default-publish.ps1"
-
-#Publish-AspNet -publishProperties $publishProperties -packOutput $packOutput
 
 . $publishScript -publishProperties $publishProperties -packOutput $packOutput

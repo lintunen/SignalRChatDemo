@@ -36,6 +36,16 @@
     <!--SignalR script to update the chat page and send messages.-->
     <script>
         $(function () {
+            // Handle submit on enter keypress
+            $('#message').keypress(function (e) {
+                var key = e.which;
+                if (key == 13)  // the enter key code
+                {
+                    $('#sendmessage').click();
+                    return false;
+                }
+            });
+
             // Reference the auto-generated proxy for the hub.
             var chat = $.connection.ChatHub;
             // Create a function that the hub can call back to display messages.
@@ -71,11 +81,11 @@
 
             // Start the connection.
             $.connection.hub.start().done(function () {
-                chat.server.subscribe($('#displayname').val());
+                chat.server.subscribe(htmlEncode($('#displayname').val()));
 
                 $('#sendmessage').click(function () {
                     // Call the Send method on the hub.
-                    chat.server.send($('#displayname').val(), $('#message').val());
+                    chat.server.send(htmlEncode($('#displayname').val()), htmlEncode($('#message').val()));
                     // Clear text box and reset focus for next comment.
                     $('#message').val('').focus();
                 });

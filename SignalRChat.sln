@@ -7,10 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5626851E-FC5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EAB9CDE4-3CAB-4BBF-BE78-F1EE1893A977}"
 	ProjectSection(SolutionItems) = preProject
+		Scripts\DeployAspNet5Website.ps1 = Scripts\DeployAspNet5Website.ps1
 		global.json = global.json
+		Scripts\PublishAspNet5Website.ps1 = Scripts\PublishAspNet5Website.ps1
 	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{601E2DB0-B8CD-4F17-8671-3AA44463383A}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SignalRChat", "src\SignalRChat\SignalRChat.xproj", "{CFCE6996-F172-4E7B-BF48-202058E790BF}"
 EndProject
@@ -29,7 +29,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{601E2DB0-B8CD-4F17-8671-3AA44463383A} = {EAB9CDE4-3CAB-4BBF-BE78-F1EE1893A977}
 		{CFCE6996-F172-4E7B-BF48-202058E790BF} = {5626851E-FC56-4174-BC2B-7A288F7757A6}
 	EndGlobalSection
 EndGlobal
