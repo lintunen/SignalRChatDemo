@@ -1,0 +1,49 @@
+﻿.body-content {
+    padding-top: 50px;
+}
+
+.row .chattable-row {
+    height: 550px;
+}
+
+.chattable-col {
+    height: 550px;
+    padding: 15px;
+}
+
+.chattable-col ul {
+    padding: 0;
+    list-style-type: none;
+    overflow: auto;
+    height: 525px;
+}
+
+.chatbox ul {
+    background-color: rgba(225, 225, 225, 0.3);
+    padding: 5px;
+}
+
+#userlist {
+    background-color: rgba(0, 64, 128, 0.1);
+    border-radius: 10px;
+}
+
+.chatbox {
+    padding: 10px;
+    border-radius: 15px;
+    border-width: thin;
+    border-color: rgba(0, 64, 128, 0.25);
+    border-style: solid;
+}
+
+#chatinput {
+    margin-top: 10px;
+}
+
+#chatinput input[type="text"] {
+    width: 100%;
+}
+
+.navbar-inverse .navbar-brand {
+    color: lightblue;
+}
